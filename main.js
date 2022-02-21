@@ -6,4 +6,10 @@ function addNewList() {
     console.log('hello world console');
 }
 
+function addListItem() {
+    console.log('hello world');
+}
+
+let list = document.getElementById("grocery-list");
+
 

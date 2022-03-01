@@ -1,0 +1,61 @@
+
+
+table {
+    width:500px; position:fixed; top: 230px; left: 420px
+}
+
+th,td {
+        font-weight: 100;background-color: #e5e5e5;padding: 10px;
+            font-size: 14px;
+}
+
+th input,td input {
+    height: 18px;
+    width: 18px;
+    box-shadow: inset 1px 1px 1px #B9B9B9;
+    background-color: white;
+    border:none;
+}
+
+
+.search input {
+    height: 25px;
+    width: 100px;
+    position:fixed;
+    left:666px;
+    top:190px;
+    box-shadow: inset 2px 2px 3px #B9B9B9, inset -2px -2px 3px #B9B9B9;
+    border: none;
+    background-color: white;
+    border-radius: ;
+}
+
+.slot-button{
+    left: 980px;
+    top: 140px;height: 40px;width: 80px;font-size: 14.5px;
+}
+
+.vaccinebutton {
+    height: 30px;
+    width: 60px;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 10px;
+    background-color: #d3d3d3;
+    color: #4d4d4d;
+    border: none;
+    box-shadow: 3px 3px 8px #b3b3b3;
+}
+
+.vaccinebutton:hover{
+    color: white;
+    background-color: #4d4d4d;
+}
+
+.viewavailable{
+    text-align: center;
+    left: 780px;
+    top: 230px;
+    position: fixed;
+    font-size: 12px;
+}

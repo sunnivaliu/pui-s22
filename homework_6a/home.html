@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Covid Home</title>
+    <meta charset="UTF-8">
+    <!-- styles -->
+    <link rel="stylesheet" href="covidstyle.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script src="covid.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="sidenav">
+        <p> &nbsp; </p> <br><br>
+        <a href="home.html" style='font-size: 28px; letter-spacing: 0.5px;'>Home</a> <br>
+        <a href="Make an appointment.html">Make an Appointment</a>
+        <a href="My tartan testing.html">My Tartan Testing</a>
+        <a href="My Vaccination.html">My Vaccination</a>
+        <a href="View Test Slot.html">View Test Slot</a>
+        <a href="View Vaccination Slot.html">View Vaccination Slot</a>
+    </div>
+
+    <div class="logo">
+        Carnegie Mellon University
+    </div>
+    <div class='logout'>
+        <a href="login.html">Log Out</a>
+    </div>
+    <div class='arrow'> </div>
+
+    <div class="main">
+        <a>HOME - STUDENT A</a>
+        <p> &nbsp; </p><p> &nbsp; </p>
+        <h2> Upcoming Testing </h2>
+        Test Date: <p1 id = 'scheduled_date'> </p1> <br><br>
+        Test Location: <p1 id = 'scheduled_location'> </p1>
+        <br><br>
+        <h2> Upcoming Vaccine Appointment </h2>
+        Vaccine Date: <p1 id = 'vaccine_date'> </p1> <br><br>
+        Vaccine Location: <p1 id = 'vaccine_location'> </p1>
+    </div>
+
+<script type="text/javascript">
+    var testSlot = JSON.parse(sessionStorage.getItem("myTestSlot"));
+    console.log(testSlot)
+    if (testSlot === null)
+        {document.getElementById("scheduled_date").innerHTML = 'None'
+        document.getElementById("scheduled_location").innerHTML = 'None'}
+    else
+        {document.getElementById("scheduled_date").innerHTML = testSlot[0].time;
+        document.getElementById("scheduled_location").innerHTML = testSlot[0].location;}
+    var covidSlot = JSON.parse(sessionStorage.getItem("myVaccineSlot"));
+    if (covidSlot === null)
+       {document.getElementById("vaccine_date").innerHTML = "None"
+        document.getElementById("vaccine_location").innerHTML = "None"}
+    else
+        {document.getElementById("vaccine_date").innerHTML = covidSlot[0].time;
+        document.getElementById("vaccine_location").innerHTML = covidSlot[0].location;}
+</script>
+
+</body>
